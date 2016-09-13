@@ -305,6 +305,7 @@
          */
         focusedDate: {
           type: Date,
+          notify: true,
           observer: '_focusedDateChanged'
         },
 
@@ -445,9 +446,6 @@
         }
 
         this.scrollToDate(new Date(), true);
-
-        // focus for keyboard navigation.
-        this.focus();
       },
 
       _showClear: function(selectedDate) {
@@ -648,6 +646,7 @@
         var eventKey = this._eventKey(e);
         if (eventKey) {
           e.preventDefault();
+          e.stopPropagation();
 
           switch (eventKey) {
             case 'down':

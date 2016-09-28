@@ -524,7 +524,7 @@
     },
 
     _userInputValueChanged: function() {
-      var parseDate = this.i18n.parseDate.bind(this)(this._inputValue);
+      var parseDate = this.i18n.parseDate(this._inputValue);
       if (this._isValidDate(parseDate)) {
         this._ignoreFoo = true;
         this._focusedDate = parseDate;

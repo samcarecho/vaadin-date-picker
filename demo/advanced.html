@@ -47,7 +47,7 @@
             },
             parseDate: function(dateString) {
               // See if we get exactly 1 match from the month names
-              var matches = this.i18n.monthNames.filter(function(monthName) {
+              var matches = datepicker.i18n.monthNames.filter(function(monthName) {
                 return monthName.toLowerCase().startsWith(dateString.trim().toLowerCase());
               });
               dateString = matches.length === 1 ? matches[0] : dateString;

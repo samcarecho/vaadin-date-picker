@@ -435,7 +435,7 @@
     },
 
     _focus: function() {
-      if (this._fullscreen) {
+      if (this._fullscreen || !this.i18n.parseDate) {
         this.$.overlay.focus();
       } else {
         this.inputElement.focus();

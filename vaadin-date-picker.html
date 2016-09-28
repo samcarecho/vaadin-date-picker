@@ -303,7 +303,7 @@ If you want to replace the default input field with a custom implementation, you
       },
 
       _onInputKeyDown: function(e) {
-        if (!this.i18n.parseDate) {
+        if (!this.i18n.parseDate && !this._fullscreen) {
           // The input element cannot be readonly as it would conflict with
           // the required attribute. Both are not allowed on an input element.
           // Therefore we prevent default on most keydown events.
